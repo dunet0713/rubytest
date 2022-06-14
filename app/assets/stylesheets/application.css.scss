@@ -1,0 +1,151 @@
+@import "carts";
+@import "store";
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome";
+@import "projects";
+@import "responsive";
+@import 'admin/application';
+.page-header {
+position: relative;
+padding-bottom: 0px;
+&:first-child {
+margin-top: 20px;
+}
+h1, h2, h3, h4, h5, h6 {
+max-width: 55%;
+}
+}
+ul.actions {
+@extend .list-unstyled;
+@extend .list-inline;
+}
+a.new, a.edit, a.delete {
+@extend .btn;
+&:before {
+font-family: "FontAwesome";
+padding-right: 0.5em;
+}
+}
+a.new {
+@extend .btn-success;
+&:before {
+@extend .fa-plus;
+}
+}
+a.edit {
+@extend .btn-primary;
+&:before {
+@extend .fa-pencil;
+}
+}
+a.delete {
+@extend .btn-danger;
+&:before {
+@extend .fa-trash;
+}
+}
+header {
+@extend .page-header;
+position: relative;
+padding-bottom: 0px;
+&:first-child {
+margin-top: 20px;
+}
+}
+.alert-notice {
+@extend .alert-success;
+}
+.alert-alert {
+@extend .alert-danger;
+}
+body {
+padding-top: 70px;
+}
+#columns {
+background: #141;
+display: flex;
+#main {
+padding: 1em;
+background: white;
+flex: 1;
+}
+#side {
+padding: 1em 2em;
+background: #141;
+form, div {
+display: inline;
+}
+input {
+font-size: small;
+}
+#cart {
+font-size: smaller;
+color:
+white;
+table {
+border-top:
+1px dotted #595;
+border-bottom: 1px dotted #595;
+margin-bottom: 10px;
+}
+}
+ul {
+padding: 0;
+li {
+list-style: none;
+a {
+color: #bfb;
+font-size: small;
+}
+}
+}
+}
+}
+@media all and (max-width: 800px) {
+#columns {
+flex-direction: column-reverse;
+}
+}
+@media all and (max-width: 500px) {
+#banner {
+height: 1em;
+}
+#banner .title {
+display: none;
+}
+}
+footer { margin-top: 100px; }
+.depot_form {
+fieldset {
+background: #efe;
+legend {
+color: #dfd;
+background: #141;
+font-family: sans-serif;
+padding: 0.2em 1em;
+}
+div {
+margin-bottom: 0.3em;
+}
+}
+form {
+label {
+width: 5em;
+float: left;
+text-align: right;
+padding-top: 0.2em;
+margin-right: 0.1em;
+display: block;
+}
+select, textarea, input {
+margin-left: 0.5em;
+}
+.submit {
+margin-left: 4em;
+}
+br {
+display: none
+}
+}
+}

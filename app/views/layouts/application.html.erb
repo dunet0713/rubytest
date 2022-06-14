@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<title>
+<% if content_for?(:title) %>
+<%= yield(:title) %>
+<% else %>
+Bikestore
+<% end %>
+</title>
+  <head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bikestore</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <body class="<%= controller.controller_name %>">
+<%= render 'layouts/navbar' %>
+
+<div id="columns">
+<div id="side">
+<div id="cart">
+<% if @cart %>
+<%= render @cart %>
+<% end %>
+</div>
+<ul>
+<li><a href="http://www....">Home</a></li>
+
+</ul>
+</div>
+<div id="main">
+<%= yield %>
+</div>
+</div>
+<%= render 'layouts/footer' %>
+  </body>
+
+</html>
